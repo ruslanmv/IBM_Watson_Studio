@@ -51,10 +51,10 @@ function sendEmail(params, callback) {
 
     let transporter = nodemailer.createTransport(smtpConfig);
     let mailOptions = {
-        from: `Your Reminder Buddy <${smtpConfig.auth.user}>`,
+        from: `Your client message <${smtpConfig.auth.user}>`,
         to: params.email,
-        subject: `REMINDER: ${params.reminder}`,
-        text: `Do it!`
+        subject: `NEW MESSAGE: ${params.reminder}`,
+        text: `Work it!`
     };
     transporter.sendMail(mailOptions, function (error, info) {
 
